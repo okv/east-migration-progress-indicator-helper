@@ -44,5 +44,8 @@
   },
   "engines": {
     "node": ">=4.0.0"
+  },
+  "dependencies": {
+    "progress": "2.0.3"
   }
 }
