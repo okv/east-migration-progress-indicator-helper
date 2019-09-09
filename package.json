@@ -1,6 +1,6 @@
 {
   "name": "east-migration-progress-indicator-helper",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0",
   "description": "East plugin which provides migration helper to log progress",
   "main": "lib/index.js",
   "scripts": {
