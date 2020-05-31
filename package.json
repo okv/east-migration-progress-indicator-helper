@@ -47,6 +47,7 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
+    "deprecate": "1.1.1",
     "progress": "2.0.3"
   }
 }
