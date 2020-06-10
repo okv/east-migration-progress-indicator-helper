@@ -70,6 +70,17 @@ describe('lib', () => {
 			);
 		});
 
+		it('beforeRollback should expose createProgressIndicator', () => {
+			const handlerParams = {migrationParams: {}};
+			hookActionHandlersMap.beforeRollback(handlerParams);
+			expect(handlerParams.migrationParams).have.keys([
+				'createProgressIndicator'
+			]);
+			expect(handlerParams.migrationParams.createProgressIndicator).eql(
+				createIndicator
+			);
+		});
+
 		it('beforeRollback should expose createBar', () => {
 			const handlerParams = {migrationParams: {}};
 			hookActionHandlersMap.beforeRollback(handlerParams);
