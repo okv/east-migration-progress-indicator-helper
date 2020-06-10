@@ -25,12 +25,12 @@ Add this plugin to the `plugins` section to `.eastrc` e.g.:
 }
 ```
 
-After that `createProgressIndicator` can be used in migrations e.g.:
+After that `createIndicator` can be used in migrations e.g.:
 
 ```js
 
 exports.migrate = function(client, done) {
-	const indicator = client.createProgressIndicator({total: 150});
+	const indicator = client.createIndicator({total: 150});
 
 	indicator.tick(5);
 

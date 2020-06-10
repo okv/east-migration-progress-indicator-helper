@@ -2,13 +2,13 @@
 
 const tap = require('tap');
 const expect = require('expect.js');
-const createProgressIndicator = require('../lib/createProgressIndicator');
+const createIndicator = require('../lib/createIndicator');
 const ProgressBar = require('../lib/ProgressBar');
 const ProgressLogger = require('../lib/ProgressLogger');
 
 tap.mochaGlobals();
 
-describe('createProgressIndicator', () => {
+describe('createIndicator', () => {
 	const isTTY = process.stdout.isTTY;
 
 	describe('with tty', () => {
@@ -23,7 +23,7 @@ describe('createProgressIndicator', () => {
 		});
 
 		it('should be done without error', () => {
-			indicator = createProgressIndicator({total: 100});
+			indicator = createIndicator({total: 100});
 		});
 
 		it('should create progress bar', () => {
@@ -47,7 +47,7 @@ describe('createProgressIndicator', () => {
 		});
 
 		it('should be done without error', () => {
-			indicator = createProgressIndicator({total: 100});
+			indicator = createIndicator({total: 100});
 		});
 
 		it('should create progress logger', () => {
