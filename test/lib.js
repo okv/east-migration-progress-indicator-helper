@@ -4,6 +4,7 @@ const tap = require('tap');
 const expect = require('expect.js');
 const libModule = require('../lib');
 const createProgressIndicator = require('../lib/createProgressIndicator');
+const createBar = require('../lib/createBar');
 
 tap.mochaGlobals();
 
@@ -66,6 +67,17 @@ describe('lib', () => {
 			]);
 			expect(handlerParams.migrationParams.createProgressIndicator).eql(
 				createProgressIndicator
+			);
+		});
+
+		it('beforeRollback should expose createBar', () => {
+			const handlerParams = {migrationParams: {}};
+			hookActionHandlersMap.beforeRollback(handlerParams);
+			expect(handlerParams.migrationParams).have.keys([
+				'createBar'
+			]);
+			expect(handlerParams.migrationParams.createBar).eql(
+				createBar
 			);
 		});
 	});
